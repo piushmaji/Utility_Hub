@@ -11,12 +11,12 @@
 
 /* Premium Dot Grid Pattern (Apple/Google style) */
 .bg-grid-dots {
-  background-image: radial-gradient(rgba(100, 116, 139, 0.08) 1.25px, transparent 1.25px);
+  background-image: radial-gradient(rgba(100, 116, 139, 0.06) 1.25px, transparent 1.25px);
   background-size: 20px 20px;
 }
 
 .dark .bg-grid-dots {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1.25px, transparent 1.25px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1.25px, transparent 1.25px);
   background-size: 20px 20px;
 }
 
@@ -32,13 +32,37 @@
 }
 
 .dark .card-premium {
-  background-color: rgba(22, 22, 23, 0.7); /* Apple's slate-gray black */
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(13, 20, 35, 0.45); /* Sleek translucent midnight slate */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.08); /* Subtle sky-blue border */
   box-shadow: 
-    0 1px 3px 0 rgba(0, 0, 0, 0.2),
-    0 16px 32px -16px rgba(0, 0, 0, 0.4),
-    0 32px 64px -24px rgba(0, 0, 0, 0.3);
+    0 4px 30px rgba(0, 0, 0, 0.25),
+    0 1px 2px 0 rgba(255, 255, 255, 0.02),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.03);
   border-radius: 1.25rem;
+}
+
+.dark .card-premium:hover {
+  border-color: rgba(56, 189, 248, 0.2); /* sky-400 border glow on hover */
+  box-shadow: 
+    0 10px 40px -10px rgba(14, 165, 233, 0.08),
+    0 1px 2px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* Glowing background blobs */
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 1s ease;
+}
+
+.dark .glow-blob {
+  opacity: 0.16;
 }
 
 /* Custom Scrollbars */
@@ -91,8 +115,8 @@ body {
 }
 
 .dark body {
-  background-color: #000000; /* Apple's pure black */
-  color: #f5f5f7;
+  background-color: #080c14; /* Premium midnight slate-blue */
+  color: #f1f5f9;
 }
 
 /* Form resets */

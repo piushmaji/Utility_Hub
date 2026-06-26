@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Terminal, Heart } from 'lucide-react';
+import { Command, Heart } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="flex items-center gap-2">
             <div className="p-1 rounded bg-slate-800 dark:bg-slate-200 text-slate-100 dark:text-slate-900">
-              <Terminal className="h-3.5 w-3.5" />
+              <Command className="h-3.5 w-3.5" />
             </div>
             <span className="font-semibold text-slate-800 dark:text-slate-200">
               Utility Hub
@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Right Section */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/piushmaji/Utility_Hub"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-slate-800 dark:hover:text-slate-200 transition-colors"

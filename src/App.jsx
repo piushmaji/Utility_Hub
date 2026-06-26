@@ -61,7 +61,11 @@ export default function App() {
     <Router>
       <ScrollToTop />
       
-      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-black text-slate-900 dark:text-slate-100 bg-grid-dots">
+      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950/20 text-slate-900 dark:text-slate-100 bg-grid-dots relative overflow-hidden">
+        {/* Decorative background glows */}
+        <div className="glow-blob bg-sky-500 w-[350px] h-[350px] -top-36 -left-36" />
+        <div className="glow-blob bg-blue-600 w-[450px] h-[450px] top-[40%] -right-36" />
+
         {/* Global Navigation Header */}
         <Navbar theme={theme} toggleTheme={toggleTheme} />
 
